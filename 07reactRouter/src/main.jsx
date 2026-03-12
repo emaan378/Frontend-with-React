@@ -9,6 +9,7 @@ import Home from './componenets/Home/Home.jsx'
 import About from './componenets/About/about.jsx'
 import Contact from './componenets/Contact/Contact.jsx'
 import Header from './componenets/Header/header.jsx'
+import User from './componenets/User/user.jsx'
 
 
 // const router = createBrowserRouter([{
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
       <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
+      <Route path="user/:userid" element={<User />} />
     </Route>
   )
 );
