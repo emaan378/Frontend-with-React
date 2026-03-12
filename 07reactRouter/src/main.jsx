@@ -10,7 +10,8 @@ import About from './componenets/About/about.jsx'
 import Contact from './componenets/Contact/Contact.jsx'
 import Header from './componenets/Header/header.jsx'
 import User from './componenets/User/user.jsx'
-
+import Github from './componenets/GitHub/Github.jsx'
+import { githubInfoLoader } from './componenets/GitHub/Github.jsx'
 
 // const router = createBrowserRouter([{
 //   path: '/',
@@ -34,6 +35,10 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="contact" element={<Contact />} />
       <Route path="user/:userid" element={<User />} />
+        <Route   
+        loader={(githubInfoLoader)} 
+        path="github" 
+        element={<Github />} />
     </Route>
   )
 );
