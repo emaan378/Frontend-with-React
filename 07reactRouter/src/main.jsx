@@ -30,6 +30,7 @@ import { githubInfoLoader } from './componenets/GitHub/Github.jsx'
 // }])
 const router = createBrowserRouter(
   createRoutesFromElements(
+    // Creates the entire routing config for your app using JSX-style routes.
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
@@ -47,3 +48,4 @@ createRoot(document.getElementById('root')).render(
     <RouterProvider router={router} />
   </StrictMode>,
 )
+// `loader` is a React Router feature that **pre-fetches data before the page loads**. It allows you to fetch data on the server side and pass it to your components as props, ensuring that the data is available when the component renders. This can improve performance and provide a better user experience by reducing loading times and avoiding unnecessary client-side data fetching.

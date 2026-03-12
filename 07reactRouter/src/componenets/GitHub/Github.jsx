@@ -14,6 +14,10 @@ function Github() {
     //         })
 
     // }, [])
+    // First renders the page empty
+// Then fetches data
+// Then re-renders with data
+// Causes a loading flicker
 
     return (
         <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl'>Github followers: {data.followers}
@@ -29,3 +33,8 @@ export const githubInfoLoader = async () => {
     // return data
     return response.json()
 }
+// 2. The New Way — useLoaderData
+// Data is already fetched before component renders
+// No loading state needed
+// No useState needed
+// Cleaner and faster rendering

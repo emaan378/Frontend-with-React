@@ -1,6 +1,19 @@
 import React from 'react'
 import {Link,NavLink} from 'react-router-dom'
 // why we use link instead of a tag?
+// A normal <a> tag causes a full page reload — it re-fetches everything from scratch, killing the benefit of React's SPA (Single Page Application).
+// Link — Basic Navigation
+// Navigates without reloading the page
+// Just changes the URL and renders the new component
+// Use it for regular navigation (logos, buttons, cards)
+// NavLink — Smart Navigation 
+// Similar to Link but with extra features
+// Automatically adds an "active" class to the link when it matches the current URL
+// Use it for navigation menus to highlight the active page
+// Example: <NavLink to="/about" activeClassName="active">About</NavLink>
+// In summary, use Link for simple navigation and NavLink when you want to indicate the active page in your navigation menu.
+
+
 
 export default function Header() {
     return (
