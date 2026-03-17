@@ -10,3 +10,4 @@ function Profile() {
 }
 
 export default Profile
+// Tnis is the profile component
