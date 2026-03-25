@@ -17,7 +17,7 @@ function TodoItem({ todo }) {
     return (
        
         <div
-            className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300 text-black hover:shadow-purple-500/30 hover:shadow-lg transition-all duration-300 ${todo.completed ? "bg-teal-500/20 border-teal-400/30" : "bg-indigo-500/20 border-indigo-400/30"
+            className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 text-black hover:shadow-purple-500/30 hover:shadow-lg transition-all duration-300 ${todo.completed ? "bg-teal-500/20 border-teal-400/30" : "bg-indigo-500/20 border-indigo-400/30"
                 }`}
         >
 
