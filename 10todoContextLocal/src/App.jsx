@@ -40,9 +40,9 @@ function App() {
 
   return (
     <TodoProvider value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}>
-      <div className="bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] min-h-screen py-8">
+      <div className="bg-linear-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] min-h-screen py-8">
         <div className="w-full max-w-2xl mx-auto shadow-2xl rounded-2xl px-4 py-3 text-white backdrop-blur-md bg-white/10 border border-white/20">
-          <h1 className="text-2xl font-bold text-center mb-8 mt-2 text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">Manage Your Todos</h1>
+          <h1 className="text-2xl font-bold text-center mb-8 mt-2 text-transparent bg-clip-text bg-linear-to-r from-pink-400 to-purple-400">Manage Your Todos</h1>
           <div className="mb-4">
             {/* Todo form goes here */}
             <TodoForm />
