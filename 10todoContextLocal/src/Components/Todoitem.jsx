@@ -1,35 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useTodo } from '../Context'
 
 function TodoItem({ todo }) {
-    const [isTodoEditable, setisTodoEditable] = useState(false)
-    const [todoMsg, settodoMsg] = useState(todo.todo)
-    const editTodo=()=>{
-        updateTodo(todo.id,{...todo,todo:todoMsg})
-        setisTodoEditable(false)
+    const [isTodoEditable, setIsTodoEditable] = useState(false)
+    const [todoMsg, setTodoMsg] = useState(todo.todo)
+    const editTodo = () => {
+        updateTodo(todo.id, { ...todo, todo: todoMsg })
+        setIsTodoEditable(false)
     }
 
-    const {updateTodo,deleteTodo,toggleComplete}=useTodo
-    const toggleCompleted=()=>{
-        toggleCompleted(todo.id)
+    const { updateTodo, deleteTodo, toggleComplete } = useTodo()
+    const toggleCompleted = () => {
+        toggleComplete(todo.id)
     }
-    
+
     return (
+       
         <div
-            className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300  text-black ${
-                todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
-            }`}
+            className={`flex border border-black/10 rounded-lg px-3 py-1.5 gap-x-3 shadow-sm shadow-white/50 duration-300 text-black hover:shadow-purple-500/30 hover:shadow-lg transition-all duration-300 ${todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"
+                }`}
         >
+
             <input
                 type="checkbox"
-                className="cursor-pointer"
+                className="cursor-pointer w-4 h-4 accent-purple-500"
                 checked={todo.completed}
                 onChange={toggleCompleted}
             />
             <input
                 type="text"
-                className={`border outline-none w-full bg-transparent rounded-lg ${
-                    isTodoEditable ? "border-black/10 px-2" : "border-transparent"
-                } ${todo.completed ? "line-through" : ""}`}
+                className={`border outline-none w-full bg-transparent rounded-lg ${isTodoEditable ? "border-black/10 px-2" : "border-transparent"
+                    } ${todo.completed ? "line-through" : ""}`}
                 value={todoMsg}
                 onChange={(e) => setTodoMsg(e.target.value)}
                 readOnly={!isTodoEditable}
